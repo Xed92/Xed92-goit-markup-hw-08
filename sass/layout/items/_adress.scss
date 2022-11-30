@@ -1,0 +1,34 @@
+.adress {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  &__item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+  }
+
+  &__link {
+    display: flex;
+    padding-top: 31.5px;
+    padding-bottom: 31.5px;
+    align-items: center;
+    fill: currentColor;
+    color: var(--tel-mail-header-color);
+    transition-property: color, fill;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--hover-focus-color-link);
+      outline: none;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}

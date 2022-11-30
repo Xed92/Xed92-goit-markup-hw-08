@@ -1,0 +1,27 @@
+.social {
+  display: flex;
+  justify-content: center;
+
+  &:not(:first-child) {
+    gap: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition-property: background-color, fill;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: var(--hover-focus-color-link);
+      outline: none;
+      fill: var(--body-background);
+    }
+  }
+}

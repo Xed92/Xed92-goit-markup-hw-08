@@ -1,0 +1,70 @@
+.agreement {
+  margin-bottom: 30px;
+  margin-left: 12px;
+
+  &__box-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__label {
+    display: block;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: #757575;
+    user-select: none;
+    background-color: inherit;
+  }
+  &__label &__link {
+    color: #2196f3;
+    text-underline-position: under;
+  }
+  &__description {
+    padding-right: 3px;
+  }
+  &__checkbox {
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    appearance: none;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    outline: none;
+    transition: border var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1),
+      background-color var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1),
+      background-image var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:checked {
+      border: none;
+      background: #2196f3;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='10' fill='none'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.2' d='m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
+    }
+  }
+
+  &__btn-send {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    display: block;
+    margin: auto;
+    padding: 10px 52px;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition-property: border-color;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: #188ce8;
+    }
+  }
+}

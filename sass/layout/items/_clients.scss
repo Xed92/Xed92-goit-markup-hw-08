@@ -1,0 +1,35 @@
+.clients {
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
+    @extend %title-group;
+  }
+  &__list {
+    --items: 6;
+  }
+  &__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    fill: #afb1b8;
+    transition-property: border-color, fill;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link:hover,
+  &__link:focus {
+    fill: var(--hover-focus-color-link);
+    border-color: var(--hover-focus-color-link);
+    outline: none;
+  }
+  &__icon {
+    display: block;
+  }
+}

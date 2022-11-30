@@ -1,0 +1,40 @@
+.adress-footer {
+  &__item {
+    font-style: normal;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__map {
+    color: #ffffff;
+    transition-property: color;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--hover-focus-color-link);
+      outline: none;
+    }
+  }
+
+  &__kontact {
+    color: var(--tel-mail-footer-color);
+    outline: none;
+    transition-property: color;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--hover-focus-color-link);
+      outline: none;
+    }
+  }
+}

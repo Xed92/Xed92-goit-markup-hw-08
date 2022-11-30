@@ -1,0 +1,27 @@
+.footer {
+  background-color: var(--footer-background);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+  &__container:not(last-child) {
+    gap: 93px;
+  }
+  &__logotype {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+}
