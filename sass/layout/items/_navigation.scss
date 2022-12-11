@@ -1,5 +1,11 @@
 .nav {
-  margin-right: auto;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    @media screen and (min-width: 1200px) {
+      margin-right: auto;
+    }
+  }
 
   &__list {
     display: flex;
@@ -10,8 +16,8 @@
   &__link {
     position: relative;
     font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.02em;
     color: #212121;
     display: flex;
@@ -21,6 +27,10 @@
     transition-property: color;
     transition-duration: var(--animation-duration);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(16 / 14);
+    }
 
     &--active::after {
       position: absolute;

@@ -1,12 +1,6 @@
 .features {
   padding-bottom: 0;
 
-  &__list {
-    display: flex;
-  }
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
   &__icon {
     height: 120px;
     margin-bottom: 30px;
@@ -21,14 +15,25 @@
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
   &__text {
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: #757575;
-    width: 270px;
+    min-width: 450px;
+    @media screen and (min-width: 768px) {
+      min-width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      min-width: 270px;
+    }
   }
 }

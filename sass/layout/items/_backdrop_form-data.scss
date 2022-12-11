@@ -24,7 +24,7 @@
     user-select: none;
   }
   &__input {
-    max-width: 448px;
+    max-width: 370px;
     height: 40px;
     font-size: 16px;
     padding-top: 12px;
@@ -35,6 +35,10 @@
     transition-property: border-color;
     transition-duration: var(--animation-duration);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 1200px) {
+      max-width: 448px;
+    }
 
     &:focus {
       border-color: var(--hover-focus-color-link);
@@ -54,7 +58,7 @@
     fill: var(--hover-focus-color-link);
   }
   &__comment {
-    width: 448px;
+    width: 370px;
     height: 120px;
     padding: 12px 16px;
     resize: none;
@@ -65,15 +69,24 @@
     transition-duration: var(--animation-duration);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    @media screen and (min-width: 1200px) {
+      width: 448px;
+    }
+
     &:focus {
       border-color: var(--hover-focus-color-link);
       outline: none;
     }
     &::placeholder {
-      font-size: 12px;
-      line-height: calc(14 / 12);
+      font-size: 14px;
+      line-height: calc(16 / 14);
       letter-spacing: 0.01em;
       color: rgba(117, 117, 117, 0.5);
+
+      @media screen and (min-width: 1200px) {
+        font-size: 12px;
+        line-height: calc(14 / 12);
+      }
     }
   }
 }

@@ -2,10 +2,18 @@
   border-bottom: 1px solid #ececec;
 
   &__container {
+    height: 60px;
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+      justify-content: space-between;
+      height: 80px;
+    }
   }
   &__logotype {
-    margin-right: 93px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
 }

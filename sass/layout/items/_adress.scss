@@ -1,25 +1,40 @@
 .adress {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    @media screen and (min-width: 1200px) {
+      gap: 40px;
+      flex-direction: row;
+    }
+  }
 
   &__item {
     font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.02em;
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(16 / 14);
+    }
   }
 
   &__link {
     display: flex;
-    padding-top: 31.5px;
-    padding-bottom: 31.5px;
     align-items: center;
     fill: currentColor;
     color: var(--tel-mail-header-color);
     transition-property: color, fill;
     transition-duration: var(--animation-duration);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 1200px) {
+      padding-top: 31.5px;
+      padding-bottom: 31.5px;
+    }
 
     &:hover,
     &:focus {

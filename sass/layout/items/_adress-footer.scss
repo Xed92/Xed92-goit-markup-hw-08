@@ -5,9 +5,16 @@
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     display: block;
+    text-align: center;
 
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
     &:not(:last-child) {
-      margin-bottom: 9px;
+      margin-bottom: 8px;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 9px;
+      }
     }
   }
 

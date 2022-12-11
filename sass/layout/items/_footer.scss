@@ -5,20 +5,41 @@
 
   &__container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      align-items: baseline;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
   }
   &__container:not(last-child) {
-    gap: 93px;
+    gap: 60px;
+    @media screen and (min-width: 1200px) {
+      gap: 93px;
+    }
   }
   &__logotype {
     color: #ffffff;
     display: block;
     margin-bottom: 20px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
   &__title {
     font-weight: 700;
     font-size: 14px;
     line-height: calc(16 / 14);
+    text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #ffffff;

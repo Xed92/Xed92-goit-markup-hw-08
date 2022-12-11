@@ -1,6 +1,9 @@
 .btn-list {
-  text-align: center;
+  text-align: start;
   margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
 
   &__item {
     display: inline;
@@ -14,6 +17,8 @@
     letter-spacing: 0.03em;
     color: #212121;
     background: #f5f4fa;
+    margin-bottom: 15px;
+    margin-right: 8px;
     border-radius: 4px;
     cursor: pointer;
     border: #f5f4fa;
@@ -21,6 +26,9 @@
     transition-property: background-color, color, box-shadow, padding;
     transition-duration: var(--animation-duration);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
 
     &:hover,
     &:focus {

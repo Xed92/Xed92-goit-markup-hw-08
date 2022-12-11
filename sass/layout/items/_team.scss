@@ -3,16 +3,31 @@
 
   &__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: calc(42 / 36);
+    font-size: 28px;
+    line-height: calc(33 / 28);
     text-align: center;
     letter-spacing: 0.03em;
-    @extend %title-group;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      letter-spacing: 0.03em;
+      margin-bottom: 50px;
+    }
   }
   &__photo {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    width: 450px;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
   &__wraper {
     background-color: var(--body-background);
@@ -39,6 +54,7 @@
   .social__link:focus &__social__icon {
     fill: var(--body-background);
   }
+
   &__social__icon {
     fill: #afb1b8;
   }

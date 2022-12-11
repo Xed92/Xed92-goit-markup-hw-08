@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="webstudio" content="web-development" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,15 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
   </head>
   <body>
     <!-- верхня лінія -->
@@ -65,6 +58,21 @@
             </a>
           </li>
         </ul>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="./images/icons.svg#icon-menu-phone"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- особливісті -->
@@ -84,9 +92,9 @@
       </section>
       <section class="features section">
         <div class="container">
-          <ul class="features__list list">
+          <ul class="features__list cards-set list">
             <!-- feature 1 -->
-            <li class="features__item">
+            <li class="features__item cards-set-item">
               <div class="features__icon">
                 <svg class="icon" width="70" height="70">
                   <use xlink:href="./images/icons.svg#icon-antenna"></use>
@@ -99,7 +107,7 @@
               </p>
             </li>
             <!-- feature 2 -->
-            <li class="features__item">
+            <li class="features__item cards-set-item">
               <div class="features__icon">
                 <svg class="icon" width="70" height="70" viewBox="0 0 32 32">
                   <use xlink:href="./images/icons.svg#icon-clock"></use>
@@ -112,7 +120,7 @@
               </p>
             </li>
             <!-- feature 3    -->
-            <li class="features__item">
+            <li class="features__item cards-set-item">
               <div class="features__icon">
                 <svg class="icon" width="70" height="70" viewBox="0 0 32 32">
                   <use xlink:href="./images/icons.svg#icon-diagram"></use>
@@ -124,7 +132,7 @@
               </p>
             </li>
             <!-- feature 4 -->
-            <li class="features__item">
+            <li class="features__item cards-set-item">
               <div class="features__icon">
                 <svg class="icon" width="70" height="70" viewBox="0 0 32 32">
                   <use xlink:href="./images/icons.svg#icon-astronaut"></use>
@@ -148,10 +156,15 @@
               <div class="skills__thumb">
                 <img
                   class="img"
+                  srcset="
+                    ./images/skills-photo/img-1_lg@1x.jpg 1x,
+                    ./images/skills-photo/img-1_lg@2x.jpg 2x
+                  "
+                  src="./images/skills-photo/x/img-1_lg-@1x.jpg"
+                  alt="працює програміст"
                   width="370"
                   height="294"
-                  src="./images/box1.jpg"
-                  alt="працює програміст"
+                  loading="lazy"
                 />
                 <div class="skills__description">Десктопні додатки</div>
               </div>
@@ -160,10 +173,15 @@
               <div class="skills__thumb">
                 <img
                   class="img"
+                  srcset="
+                    ./images/skills-photo/img-2_lg@1x.jpg 1x,
+                    ./images/skills-photo/img-2_lg@2x.jpg 2x
+                  "
+                  src="./images/skills-photo/x/img-2_lg-@1x.jpg"
+                  alt="програміст розробляє додаткі для смартфонів"
                   width="370"
                   height="294"
-                  src="./images/box2.jpg"
-                  alt="програміст розробляє додаткі для смартфонів"
+                  loading="lazy"
                 />
                 <div class="skills__description">Мобільні додатки</div>
               </div>
@@ -172,10 +190,15 @@
               <div class="skills__thumb">
                 <img
                   class="img"
+                  srcset="
+                    ./images/skills-photo/img-2_lg@1x.jpg 1x,
+                    ./images/skills-photo/img-2_lg@2x.jpg 2x
+                  "
+                  src="./images/skills-photo/x/img-2_lg-@1x.jpg"
+                  alt="креативний художник веб-дизайн в роботі"
                   width="370"
                   height="294"
-                  src="./images/box3.jpg"
-                  alt="креативний художник веб-дизайн в роботі"
+                  loading="lazy"
                 />
                 <div class="skills__description">Дизайнерські рішення</div>
               </div>
@@ -190,13 +213,65 @@
           <ul class="cards-set list">
             <!-- team card 1 -->
             <li class="team__photo card-set-item">
-              <img
-                class="img"
-                width="270"
-                height="260"
-                src="./images/persone1.jpg"
-                alt="працівник команди"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-photo/img-1_lg@1x.webp 1x,
+                    ./images/team-photo/img-1_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-photo/img-1_lg@1x.jpg 1x,
+                    ./images/team-photo/img-1_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team-photo/img-1_md@1x.webp 1x,
+                    ./images/team-photo/img-1_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team-photo/img-1_md@1x.jpg 1x,
+                    ./images/team-photo/img-1_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team-photo/img-1_sm@1x.webp 1x,
+                    ./images/team-photo/img-1_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team-photo/img-1_sm@1x.jpg 1x,
+                    ./images/team-photo/img-1_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img"
+                  src="./images/team-photo/img-1_sm@1x.jpg"
+                  alt="працівник команди"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__wraper">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p lang="en" class="team__position">Product Designer</p>
@@ -260,13 +335,67 @@
             </li>
             <!-- team card 2 -->
             <li class="team__photo card-set-item">
-              <img
-                class="img"
-                width="270"
-                height="260"
-                src="./images/persone2.jpg"
-                alt="працівник команди"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-photo/img-2_lg@1x.webp 1x,
+                    ./images/team-photo/img-2_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-photo/img-2_lg@1x.jpg 1x,
+                    ./images/team-photo/img-2_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team-photo/img-2_md@1x.webp 1x,
+                    ./images/team-photo/img-2_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team-photo/img-2_md@1x.jpg 1x,
+                    ./images/team-photo/img-2_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ../images/team-photo/img-2_sm@1x.webp 1x,
+                    ../images/team-photo/img-2_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ../images/team-photo/img-2_sm@1x.jpg 1x,
+                    ../images/team-photo/img-2_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img"
+                  src="./images/team-photo/img-2_sm@1x.jpg"
+                  alt="працівник команди"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__wraper">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p lang="en" class="team__position">Frontend Developer</p>
@@ -330,13 +459,67 @@
             </li>
             <!-- team card 3 -->
             <li class="team__photo card-set-item">
-              <img
-                class="img"
-                width="270"
-                height="260"
-                src="./images/persone3.jpg"
-                alt="працівник команди"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-photo/img-3_lg@1x.webp 1x,
+                    ./images/team-photo/img-3_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-photo/img-3_lg@1x.jpg 1x,
+                    ./images/team-photo/img-3_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team-photo/img-3_md@1x.webp 1x,
+                    ./images/team-photo/img-3_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team-photo/img-3_md@1x.jpg 1x,
+                    ./images/team-photo/img-3_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ../images/team-photo/img-3_sm@1x.webp 1x,
+                    ../images/team-photo/img-3_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ../images/team-photo/img-3_sm@1x.jpg 1x,
+                    ../images/team-photo/img-3_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img"
+                  src="./images/team-photo/img-3_sm@1x.jpg"
+                  alt="працівник команди"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__wraper">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p lang="en" class="team__position">Marketing</p>
@@ -400,13 +583,67 @@
             </li>
             <!-- team card 4 -->
             <li class="team__photo card-set-item">
-              <img
-                class="img"
-                width="270"
-                height="260"
-                src="./images/persone4.jpg"
-                alt="працівник команди"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-photo/img-4_lg@1x.webp 1x,
+                    ./images/team-photo/img-4_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-photo/img-4_lg@1x.jpg 1x,
+                    ./images/team-photo/img-4_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team-photo/img-4_md@1x.webp 1x,
+                    ./images/team-photo/img-4_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team-photo/img-4_md@1x.jpg 1x,
+                    ./images/team-photo/img-4_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ../images/team-photo/img-4_sm@1x.webp 1x,
+                    ../images/team-photo/img-4_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ../images/team-photo/img-4_sm@1x.jpg 1x,
+                    ../images/team-photo/img-4_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img"
+                  src="./images/team-photo/img-4_sm@1x.jpg"
+                  alt="працівник команди"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__wraper">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p lang="en" class="team__position">UI Designer</p>
@@ -743,7 +980,72 @@
         </div>
       </div>
     </div>
-
+    <!-- mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          width="40"
+          height="40"
+          class="menu-toggle__closed"
+        >
+          <use xlink:href="./images/icons.svg#icon-close_mobile-menu"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu list">
+        <li class="mobile-menu__item">
+          <a
+            href="./index.html"
+            class="mobile-menu__link mobile-menu__link--active link"
+            >Студія</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="./portfolio.html" class="mobile-menu__link link">
+            Портфоліо
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="mobile-menu__link link">Контакти</a>
+        </li>
+      </ul>
+      <ul class="mobile-contact list">
+        <li class="mobile-cotact__item">
+          <a class="mobile-contact__contacts--phone link" href="+380961111111"
+            >+38 096 111 11 11</a
+          >
+        </li>
+        <li class="mobile-cotact__item">
+          <a
+            class="mobile-contact__contacts--mail link"
+            href="info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-social list">
+        <li class="mobile-social__item">
+          <a class="mobile-social__socials link" href="">Instagram</a>
+        </li>
+        <li class="mobile-social__item">
+          <a class="mobile-social__socials link" href="">Twitter</a>
+        </li>
+        <li class="mobile-social__item">
+          <a class="mobile-social__socials link" href="">Facebook</a>
+        </li>
+        <li class="mobile-social__item">
+          <a class="mobile-social__socials link" href="">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

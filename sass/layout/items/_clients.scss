@@ -1,18 +1,24 @@
 .clients {
   &__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: calc(42 / 36);
+    font-size: 28px;
+    line-height: calc(33 / 28);
     text-align: center;
     letter-spacing: 0.03em;
-    @extend %title-group;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      margin-bottom: 50px;
+    }
   }
   &__list {
     --items: 6;
   }
   &__link {
     display: flex;
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
@@ -22,6 +28,15 @@
     transition-property: border-color, fill;
     transition-duration: var(--animation-duration);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) {
+      width: 226px;
+      height: 92px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+      height: 92px;
+    }
   }
   &__link:hover,
   &__link:focus {
