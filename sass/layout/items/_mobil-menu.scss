@@ -102,10 +102,14 @@
 }
 .mobile-contact__contacts--phone {
   font-weight: 500;
-  font-size: 34px;
-  line-height: calc(40 / 34);
+  font-size: 24px;
+  line-height: calc(28 / 24);
   letter-spacing: 0.02em;
   color: #2196f3;
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+    line-height: calc(40 / 34);
+  }
 }
 
 .mobile-contact__contacts--mail {
@@ -117,7 +121,11 @@
 }
 .mobile-social {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  @media screen and (min-width: 480px) {
+    flex-wrap: nowrap;
+  }
 }
 .mobile-social__item:not(:first-child)::after {
   position: relative;
